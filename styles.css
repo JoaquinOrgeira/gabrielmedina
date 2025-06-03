@@ -1,5 +1,5 @@
 html{
-  background-color: lightgray;
+  background-color: #bdb76b;
 }
 body {
   font-family: Arial, sans-serif;
@@ -8,6 +8,11 @@ body {
     
   
 }
+hr {
+  border: 2px solid #bdb76b;
+   height: 2px; 
+
+ }
 
 summary {
     border: 1px solid #ccc;
@@ -17,7 +22,7 @@ summary {
     display: inline-block;
     box-shadow:  0 4px 8px rgba(0, 0, 0, 0.3);
     width: 30%;
-  font-size: 29px;
+  font-size: 19px;
   }
   .bio{
    width: 92%;
@@ -87,4 +92,63 @@ h1{
       margin-right: 5px;
       font-size: 37px;
   }
-  
+.pocimas {
+  background: linear-gradient(to bottom, #bdb76b, #708090, #bdb76b);
+  padding-top: 10px; /* Ajuste al padding-top para separación */
+}
+.lagrima {
+  background: linear-gradient(to bottom, #bdb76b, #708090, #bdb76b);
+  padding-top: 10px; /* Ajuste al padding-top para separación */
+}.muerte {
+  background: linear-gradient(to bottom, #bdb76b, #708090, #bdb76b);
+  padding-top: 10px; /* Ajuste al padding-top para separación */
+}.fuga {
+  background: linear-gradient(to bottom, #bdb76b, #708090, #bdb76b);
+  padding-top: 10px; /* Ajuste al padding-top para separación */
+}
+.tiempo {
+  background: linear-gradient(to bottom, #bdb76b,#a0522d, #bdb76b);
+  padding-top: 10px; /* Ajuste al padding-top para separación */
+  text-align: center;
+}
+.tiempo h4{ 
+  width: 40%;
+  position: relative;
+left: 30%;
+}
+.triplete {
+  background: linear-gradient(to bottom, #bdb76b,#a0522d, #bdb76b);
+  padding-top: 10px; /* Ajuste al padding-top para separación */
+}
+
+
+.miscelaneas {
+  background: linear-gradient(to bottom, #bdb76b, #483d8b, #bdb76b);
+  padding-top: 10px; /* Ajuste al padding-top para separación */
+}
+
+.miscelaneas hr{
+  border: 2px solid #483d8b;
+  width: 20%;
+}
+
+.libros hr{
+  border: 2px solid #708090;
+  width: 20%;
+}
+
+.fanzines hr{
+  border: 2px solid #a0522d;
+  width: 20%;
+}
+
+@media(max-width: 602px){
+iframe{
+  width: 90%
+
+}
+.tiempo h4{
+width: 100%;
+left: unset;
+}
+}
