@@ -121,6 +121,10 @@ left: 30%;
   padding-top: 10px; /* Ajuste al padding-top para separación */
 }
 
+.bolsillo {
+  background: linear-gradient(to bottom, #8B7D3C, #bdb76b, #bdb76b);
+  padding-top: 10px; /* Ajuste al padding-top para separación */
+}
 
 .miscelaneas {
   background: linear-gradient(to bottom, #bdb76b, #483d8b, #bdb76b);
