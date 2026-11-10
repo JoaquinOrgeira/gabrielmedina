@@ -1,318 +1,192 @@
-/* ============================================
-   RESET Y BASE
-   ============================================ */
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-html {
-  background-color: #bdb76b;
-  max-width: 100%;
-  overflow-x: hidden;
-  -webkit-text-size-adjust: 100%;
-}
+/* ===== PALETA =====
+   Beige claro:   #F5F0E1 (fondo principal)
+   Beige cálido:  #EDE6D3 (superficies)
+   Celeste pastel:#A8DADC
+   Celeste vivo:  #6EC6D9
+   Azul vibrante: #4A9EC9
+   Verde pastel:  #B8E0C2
+   Verde vibrante:#5CBF8A
+   Verde menta:   #7FD1AE
+   Texto oscuro:  #2C4A52
+*/
 
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  max-width: 100%;
-  overflow-x: hidden;
-  color: #000;
+  background-color: #F5F0E1;
+  color: #2C4A52;
+  font-family: 'Segoe UI', system-ui, sans-serif;
 }
 
-/* ============================================
-   TIPOGRAFÍA
-   ============================================ */
+/* Contenedores / tarjetas */
+.card,
+.container {
+  background-color: #EDE6D3;
+  border: 2px solid #A8DADC;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(74, 158, 201, 0.15);
+}
+
+/* Encabezados */
+h1, h2, h3 {
+  color: #4A9EC9;
+  letter-spacing: 0.5px;
+}
+
 h1 {
-  font-size: clamp(28px, 8vw, 50px);
-  text-align: center;
-  padding: 0 10px;
+  background: linear-gradient(90deg, #6EC6D9, #5CBF8A);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
-h2 {
-  text-align: center;
-  padding: 0 10px;
+/* Botones primarios */
+.btn-primary,
+button {
+  background: linear-gradient(135deg, #6EC6D9, #5CBF8A);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 22px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-h3 {
-  text-align: center;
-  padding: 0 10px;
+.btn-primary:hover,
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(92, 191, 138, 0.4);
 }
 
-h4 {
-  width: 90%;
-  max-width: 900px;
-  margin: 10px auto;
-  padding: 0 10px;
-  text-align: center;
-  line-height: 1.5;
-  font-weight: normal;
+/* Botones secundarios */
+.btn-secondary {
+  background-color: #B8E0C2;
+  color: #2C4A52;
+  border: 2px solid #7FD1AE;
+  border-radius: 12px;
+  padding: 10px 22px;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
 }
 
-p {
-  overflow-wrap: anywhere;
-  word-break: break-word;
-  padding: 0 10px;
+.btn-secondary:hover {
+  background-color: #A8DADC;
 }
 
-/* ============================================
-   ENLACES
-   ============================================ */
+/* Enlaces */
 a {
-  color: black;
+  color: #4A9EC9;
   text-decoration: none;
-  display: inline-block;
-  margin: 10px auto;
-  padding: 0 10px;
-  overflow-wrap: anywhere;
-  word-break: break-word;
-  max-width: 100%;
+  border-bottom: 2px solid #A8DADC;
+  transition: color 0.2s ease, border-color 0.2s ease;
 }
 
 a:hover {
-  text-decoration: underline;
+  color: #5CBF8A;
+  border-color: #5CBF8A;
 }
 
-/* ============================================
-   IMÁGENES, VIDEO E IFRAMES (RESPONSIVE)
-   ============================================ */
-img {
-  width: 200px;
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
+/* Inputs / formularios */
+input,
+textarea,
+select {
+  background-color: #FFFFFF;
+  border: 2px solid #A8DADC;
+  border-radius: 10px;
+  padding: 10px 14px;
+  color: #2C4A52;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-video {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #5CBF8A;
+  box-shadow: 0 0 0 3px rgba(127, 209, 174, 0.3);
 }
 
-iframe {
-  display: block;
-  margin: 10px auto;
-  width: 100%;
-  max-width: 560px;
-  height: auto;
-  aspect-ratio: 16 / 9;
-  border: 0;
+/* Tablas */
+table {
+  border-collapse: collapse;
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
-/* ============================================
-   SEPARADORES
-   ============================================ */
-hr {
-  border: none;
-  border-top: 2px solid #bdb76b;
-  height: 0;
-  width: 100%;
-  margin: 15px auto;
+th {
+  background: linear-gradient(90deg, #6EC6D9, #7FD1AE);
+  color: #FFFFFF;
+  padding: 12px;
 }
 
-.libros hr,
-.fanzines hr,
-.miscelaneas hr {
-  width: 20%;
-  min-width: 80px;
+td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #EDE6D3;
 }
 
-.libros hr   { border-top-color: #708090; }
-.fanzines hr { border-top-color: #a0522d; }
-.miscelaneas hr { border-top-color: #483d8b; }
+tr:nth-child(even) {
+  background-color: #F5F0E1;
+}
 
-/* ============================================
-   HEADER
-   ============================================ */
-header {
-  display: block;
-  width: 100%;
+tr:hover {
+  background-color: #B8E0C2;
+}
+
+/* Badges / etiquetas */
+.badge {
+  background-color: #A8DADC;
+  color: #2C4A52;
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 0.85em;
+  font-weight: 600;
+}
+
+.badge-success {
+  background-color: #B8E0C2;
+  color: #2C4A52;
+}
+
+/* Alertas */
+.alert {
+  background-color: #A8DADC;
+  border-left: 5px solid #4A9EC9;
+  border-radius: 10px;
+  padding: 14px 18px;
+  color: #2C4A52;
+}
+
+.alert-success {
+  background-color: #B8E0C2;
+  border-left-color: #5CBF8A;
+}
+
+/* Navbar */
+nav,
+.navbar {
+  background: linear-gradient(90deg, #6EC6D9, #7FD1AE);
+  border-radius: 0 0 16px 16px;
+  padding: 14px 24px;
+}
+
+nav a,
+.navbar a {
+  color: #FFFFFF;
+  border-bottom: none;
+  font-weight: 600;
+}
+
+nav a:hover,
+.navbar a:hover {
+  color: #F5F0E1;
+  opacity: 0.9;
+}
+
+/* Footer */
+footer {
+  background-color: #EDE6D3;
+  color: #4A9EC9;
+  border-top: 3px solid #A8DADC;
+  padding: 20px;
   text-align: center;
-  padding: 10px;
-}
-
-.centered-image {
-  display: block;
-  margin: 0 auto;
-  border-radius: 100px;
-  max-width: 100%;
-  height: auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-/* ============================================
-   BIOGRAFÍA (details / summary)
-   ============================================ */
-details {
-  text-align: center;
-  width: 95%;
-  max-width: 1000px;
-  margin: 10px auto;
-  padding: 0 10px;
-}
-
-summary {
-  border: 1px solid #ccc;
-  padding: 10px;
-  background-color: #f0f0f0;
-  border-radius: 4px;
-  display: inline-block;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  width: auto;
-  min-width: 180px;
-  max-width: 100%;
-  font-size: 18px;
-  cursor: pointer;
-}
-
-.bio {
-  width: 100%;
-  max-width: 100%;
-  text-align: center;
-  padding: 15px 10px;
-  line-height: 1.6;
-  overflow-wrap: anywhere;
-  word-break: break-word;
-}
-
-/* ============================================
-   SECCIONES (gradientes unificados)
-   ============================================ */
-.bolsillo {
-  background: linear-gradient(to bottom, #8B7D3C, #bdb76b, #bdb76b);
-  padding: 20px 10px;
-  width: 100%;
-}
-
-.pocimas,
-.lagrima,
-.muerte,
-.fuga {
-  background: linear-gradient(to bottom, #bdb76b, #708090, #bdb76b);
-  padding: 20px 10px;
-  width: 100%;
-}
-
-.tiempo,
-.triplete {
-  background: linear-gradient(to bottom, #bdb76b, #a0522d, #bdb76b);
-  padding: 20px 10px;
-  width: 100%;
-  text-align: center;
-}
-
-.miscelaneas {
-  background: linear-gradient(to bottom, #bdb76b, #483d8b, #bdb76b);
-  padding: 20px 10px;
-  width: 100%;
-}
-
-/* Bloques internos: contenidos y centrados */
-.libros,
-.fanzines {
-  padding: 20px 10px;
-  width: 100%;
-}
-
-/* ============================================
-   FOOTER
-   ============================================ */
-.footer {
-  background-color: #000;
-  color: #fff;
-  padding: 20px 15px;
-  text-align: center;
-  display: block;
-  width: 100%;
-}
-
-.footer a {
-  color: #fff;
-  margin: 10px auto;
-  padding: 8px 10px;
-  text-decoration: none;
-  display: block;
-  overflow-wrap: anywhere;
-  word-break: break-word;
-}
-
-.footer a:hover {
-  text-decoration: underline;
-}
-
-.footer p {
-  margin: 10px auto;
-  overflow-wrap: anywhere;
-}
-
-.footer .icon {
-  margin-right: 8px;
-  font-size: 28px;
-  vertical-align: middle;
-}
-
-.footer h4 {
-  margin-top: 20px;
-  font-size: 14px;
-  padding: 0 10px;
-}
-
-/* ============================================
-   MEDIA QUERIES
-   ============================================ */
-@media (max-width: 768px) {
-  h4 {
-    width: 95%;
-    font-size: 15px;
-  }
-
-  iframe {
-    width: 100%;
-  }
-
-  .footer .icon {
-    font-size: 24px;
-  }
-}
-
-@media (max-width: 480px) {
-  body {
-    padding: 0 5px;
-  }
-
-  h1 {
-    font-size: 32px;
-  }
-
-  h4 {
-    width: 100%;
-    font-size: 14px;
-  }
-
-  summary {
-    width: 90%;
-    font-size: 16px;
-  }
-
-  .bio {
-    padding: 10px 5px;
-    font-size: 14px;
-  }
-
-  img {
-    width: 160px;
-  }
-
-  .footer .icon {
-    font-size: 20px;
-    margin-right: 5px;
-  }
-
-  .footer a {
-    font-size: 14px;
-    padding: 6px 5px;
-  }
-  }
+   }
